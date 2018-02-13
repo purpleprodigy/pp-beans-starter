@@ -1,0 +1,63 @@
+/*--------------------------------------------------------------
+content
+--------------------------------------------------------------*/
+.tm-main {
+  background: @black;
+}
+
+.tm-primary .uk-article, .tm-secondary .tm-widget {
+    .box-shadow(@global-medium-box-shadow);
+}
+
+.tm-primary {
+  .uk-article {
+    padding: 30px;
+    @media (min-width: @breakpoint-medium){
+      padding: 40px;
+    }
+
+  }
+}
+
+.tm-secondary {
+  .tm-widget {
+    padding: 20px;
+    @media (min-width: @breakpoint-medium){
+      padding: 30px;
+    }
+
+  }
+}
+
+article > .tm-article-image:first-child {
+  margin-top: -30px;
+  margin-left: -30px;
+  margin-right: -30px;
+
+
+  @media (min-width: @breakpoint-medium){
+    margin-top: -40px;
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
+}
+
+/*-----------------------------------------------------------
+	Comments
+/*------------------------------------------------------------*/
+.tm-comments{
+  @media (min-width: @breakpoint-medium){
+    padding: 40px;
+  }
+}
+.tm-comment-form-wrap{
+
+    padding: 30px;
+    .box-shadow(@global-medium-box-shadow);
+
+}
+
+
+
+

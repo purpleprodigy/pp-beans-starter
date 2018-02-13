@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+Header nav
+--------------------------------------------------------------*/
+.tm-header{
+  .uk-navbar-nav > li > a{
+    color: @global-color;
+    font-size:12px;
+    text-transform: uppercase;
+    font-family: @base-heading-font-family;
+    &:hover{
+      color:@primary-color;
+    }
+
+  }
+  &.uk-active {
+    .uk-navbar-nav > li > a {
+      color: @global-color;
+      &:hover{
+        color: @primary-color;
+      }
+    }
+  }
+  .sub-menu > li > a{
+    font-family: @base-heading-font-family;
+    letter-spacing: 1px;
+  }
+}
+
+.tm-primary-menu{
+  .uk-dropdown{
+    top:32px !important;
+  }
+}
+
+/*-----------------------------------------------------------
+	Mobile nav off canvas
+/*------------------------------------------------------------*/
