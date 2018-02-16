@@ -1,45 +1,3 @@
-/*--------------------------------------------------------------
-Fonts
---------------------------------------------------------------*/
-@font-face {
-  font-family: 'icomoon';
-  src: url('../../fonts/icomoon.eot?gdf0z1');
-  src: url('../../fonts/icomoon.eot?gdf0z1#iefix') format('embedded-opentype'), url('../../fonts/icomoon.ttf?gdf0z1') format('truetype'), url('../../fonts/icomoon.woff?gdf0z1') format('woff'), url('../../fonts/icomoon.svg?gdf0z1#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-link:before {
-  content: "\e015";
-}
-.icon-magnify:before {
-  content: "\e01f";
-}
-.icon-eye:before {
-  content: "\e02c";
-}
-.icon-close:before {
-  content: "\e306";
-}
-.icon-previous:before {
-  content: "\e628";
-}
-.icon-next:before {
-  content: "\e629";
-}
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -50,7 +8,7 @@ Fonts
  */
 html {
   /* 1 */
-  font: 400 16px / 1.5 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 16px / 1.5 'Open Sans', Helvetica, Arial, sans-serif;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -84,13 +42,13 @@ a:hover {
  */
 a,
 .uk-link {
-  color: aqua;
+  color: purple;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover,
 .uk-link:hover {
-  color: #00cccc;
+  color: #4d004d;
   text-decoration: none;
 }
 /* Text-level semantics
@@ -268,11 +226,11 @@ h4,
 h5,
 h6 {
   margin: 0 0 25px 0;
-  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-weight: 600;
   color: #444;
   text-transform: none;
-  color: aqua;
+  color: purple;
   margin-bottom: 15px;
 }
 /*
@@ -389,12 +347,12 @@ pre {
 /* Selection pseudo-element
  ========================================================================== */
 ::-moz-selection {
-  background: aqua;
+  background: purple;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: aqua;
+  background: purple;
   color: #fff;
   text-shadow: none;
 }
@@ -1413,7 +1371,7 @@ iframe {
  * Sub-modifier: `uk-panel-box-primary`
  */
 .uk-panel-box-primary {
-  background-color: #c2ffff;
+  background-color: #ff43ff;
   color: #2d7091;
 }
 .uk-panel-box-primary-hover:hover {
@@ -1442,7 +1400,7 @@ iframe {
   color: #444;
 }
 .uk-panel-hover:hover {
-  background: #c2ffff;
+  background: #ff43ff;
   color: #444;
 }
 .uk-panel-hover .uk-panel-badge {
@@ -1794,7 +1752,7 @@ iframe {
  * Item subtitle
  */
 .uk-nav li > a > div {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
 }
 /* Sub-object: `uk-nav-header`
@@ -1803,7 +1761,7 @@ iframe {
   padding: 5px 15px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }
 .uk-nav-header:not(:first-child) {
   margin-top: 15px;
@@ -1856,7 +1814,7 @@ ul.uk-nav-sub {
 }
 /* Active */
 .uk-nav-side > li.uk-active > a {
-  background: aqua;
+  background: purple;
   color: #fff;
 }
 /*
@@ -1869,13 +1827,13 @@ ul.uk-nav-sub {
  * Sub-object: `uk-nav-divider`
  */
 .uk-nav-side .uk-nav-divider {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ededed;
 }
 /*
  * Nested items
  */
 .uk-nav-side ul a {
-  color: aqua;
+  color: purple;
 }
 .uk-nav-side ul a:hover {
   color: #2D3047;
@@ -1895,7 +1853,7 @@ ul.uk-nav-sub {
  */
 .uk-nav-dropdown > li > a:hover,
 .uk-nav-dropdown > li > a:focus {
-  background: aqua;
+  background: purple;
   color: #fff;
   /* 2 */
   outline: none;
@@ -1910,13 +1868,13 @@ ul.uk-nav-sub {
  * Sub-object: `uk-nav-divider`
  */
 .uk-nav-dropdown .uk-nav-divider {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ededed;
 }
 /*
  * Nested items
  */
 .uk-nav-dropdown ul a {
-  color: aqua;
+  color: purple;
 }
 .uk-nav-dropdown ul a:hover {
   color: #2D3047;
@@ -1936,7 +1894,7 @@ ul.uk-nav-sub {
  */
 .uk-nav-navbar > li > a:hover,
 .uk-nav-navbar > li > a:focus {
-  background: aqua;
+  background: purple;
   color: #fff;
   /* 2 */
   outline: none;
@@ -1951,13 +1909,13 @@ ul.uk-nav-sub {
  * Sub-object: `uk-nav-divider`
  */
 .uk-nav-navbar .uk-nav-divider {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ededed;
 }
 /*
  * Nested items
  */
 .uk-nav-navbar ul a {
-  color: aqua;
+  color: purple;
 }
 .uk-nav-navbar ul a:hover {
   color: #2D3047;
@@ -1980,7 +1938,7 @@ ul.uk-nav-sub {
 .uk-nav-offcanvas > .uk-open > a,
 html:not(.uk-touch) .uk-nav-offcanvas > li > a:hover,
 html:not(.uk-touch) .uk-nav-offcanvas > li > a:focus {
-  background: aqua;
+  background: purple;
   color: #fff;
   /* 2 */
   outline: none;
@@ -1990,7 +1948,7 @@ html:not(.uk-touch) .uk-nav-offcanvas > li > a:focus {
  * `html .uk-nav` needed for higher specificity to override hover
  */
 html .uk-nav.uk-nav-offcanvas > li.uk-active > a {
-  background: aqua;
+  background: purple;
   color: #fff;
 }
 /*
@@ -2003,14 +1961,14 @@ html .uk-nav.uk-nav-offcanvas > li.uk-active > a {
  * Sub-object: `uk-nav-divider`
  */
 .uk-nav-offcanvas .uk-nav-divider {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ededed;
 }
 /*
  * Nested items
  * No hover on touch devices because it behaves buggy in fixed offcanvas
  */
 .uk-nav-offcanvas ul a {
-  color: #ccc;
+  color: #ededed;
 }
 html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   color: #fff;
@@ -2064,7 +2022,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 2 */
   color: #444;
   font-size: 16px;
-  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 /* Appear not as link */
@@ -2081,7 +2039,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-navbar-nav > li > a:focus,
 .uk-navbar-nav > li.uk-open > a {
   background-color: transparent;
-  color: aqua;
+  color: purple;
   /* 3 */
   outline: none;
 }
@@ -2093,7 +2051,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
   background-color: transparent;
-  color: aqua;
+  color: purple;
 }
 /* Sub-objects: `uk-navbar-nav-subtitle`
  ========================================================================== */
@@ -2145,7 +2103,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   color: #07D;
 }
 .uk-navbar-content > a:not([class]):hover {
-  color: aqua;
+  color: purple;
 }
 /* Sub-objects: `uk-navbar-brand`
  ========================================================================== */
@@ -2435,7 +2393,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   border-radius: 0;
   padding: 10px;
   font-weight: 400;
-  color: aqua;
+  color: purple;
 }
 /*
  * Links
@@ -2456,7 +2414,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 .uk-pagination > li > a:hover,
 .uk-pagination > li > a:focus {
-  background-color: aqua;
+  background-color: purple;
   color: #fff;
   /* 2 */
   outline: none;
@@ -2470,7 +2428,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  * Active
  */
 .uk-pagination > .uk-active > span {
-  background: aqua;
+  background: purple;
   color: #fff;
 }
 /*
@@ -3274,7 +3232,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 5 */
   font-size: 18px;
   line-height: 30px;
-  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif !important;
   font-size: 16px;
 }
 /*
@@ -3534,7 +3492,7 @@ select.uk-form-width-mini {
   display: inline-block;
   box-sizing: border-box;
   padding: 0 20px;
-  background: aqua;
+  background: purple;
   vertical-align: middle;
   /* 8 */
   line-height: 40px;
@@ -3545,10 +3503,10 @@ select.uk-form-width-mini {
   /* 11 */
   text-decoration: none;
   text-align: center;
-  border: 2px solid aqua;
+  border: 2px solid purple;
   border-radius: 2px;
   background-color: transparent;
-  color: aqua;
+  color: purple;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -3569,7 +3527,7 @@ select.uk-form-width-mini {
  */
 .uk-button:hover,
 .uk-button:focus {
-  background-color: #00cccc;
+  background-color: #4d004d;
   color: #fff;
   /* 2 */
   outline: none;
@@ -3582,7 +3540,7 @@ select.uk-form-width-mini {
 /* Active */
 .uk-button:active,
 .uk-button.uk-active {
-  background-color: aqua;
+  background-color: purple;
   color: #fff;
 }
 /* Color modifiers
@@ -3591,20 +3549,20 @@ select.uk-form-width-mini {
  * Modifier: `uk-button-primary`
  */
 .uk-button-primary {
-  background-color: aqua;
+  background-color: purple;
   color: #fff;
   border: none;
 }
 /* Hover */
 .uk-button-primary:hover,
 .uk-button-primary:focus {
-  background-color: #33ffff;
+  background-color: #b300b3;
   color: #fff;
 }
 /* Active */
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
-  background-color: aqua;
+  background-color: purple;
   color: #fff;
 }
 /*
@@ -3667,13 +3625,13 @@ select.uk-form-width-mini {
 }
 /* Color */
 .uk-button-link {
-  color: aqua;
+  color: purple;
 }
 .uk-button-link:hover,
 .uk-button-link:focus,
 .uk-button-link:active,
 .uk-button-link.uk-active {
-  color: #00cccc;
+  color: #4d004d;
   text-decoration: underline;
 }
 .uk-button-link:disabled {
@@ -5948,7 +5906,7 @@ select.uk-form-width-mini {
   opacity: 0.7;
 }
 .uk-close-alt:hover {
-  background: aqua;
+  background: purple;
 }
 .uk-close-alt:hover,
 .uk-close-alt:focus {
@@ -5968,7 +5926,7 @@ select.uk-form-width-mini {
 .uk-badge {
   display: inline-block;
   padding: 0 5px;
-  background: aqua;
+  background: purple;
   font-size: 10px;
   font-weight: bold;
   line-height: 14px;
@@ -6197,7 +6155,7 @@ a.uk-thumbnail:focus {
   left: 0;
   right: 0;
   /* 2 */
-  padding: 20px;
+  padding: 10px;
   color: #fff;
 }
 /*
@@ -6220,7 +6178,7 @@ a.uk-thumbnail:focus {
 }
 .uk-overlay-panel a:not([class]) {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .uk-overlay-panel a[class*='uk-icon-']:not(.uk-icon-button) {
   color: inherit;
@@ -7390,12 +7348,6 @@ a.uk-thumbnail:focus {
   margin-top: 0;
   background: #f5f5f5;
   color: #444;
-  border: 1px solid #ededed;
-  background: #fff;
-  font-size: 10px;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-top: 23px;
 }
 .uk-open > .uk-dropdown-navbar {
   -webkit-animation: uk-slide-top-fixed 0.2s ease-in-out;
@@ -7660,7 +7612,7 @@ a.uk-thumbnail:focus {
   /* 4 */
   background: rgba(0, 0, 0, 0.1);
   font-weight: 300;
-  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -7770,7 +7722,7 @@ a.uk-thumbnail:focus {
   color: #fff;
 }
 .uk-offcanvas .uk-panel a:not([class]):hover {
-  color: aqua;
+  color: purple;
 }
 /* ========================================================================
    Component: Switcher
@@ -8917,6 +8869,412 @@ a.uk-thumbnail:focus {
     page-break-after: avoid;
   }
 }
+:not(pre) > code,
+:not(pre) > kbd,
+:not(pre) > samp {
+  white-space: normal;
+}
+/*--------------------------------------------------------------
+Header nav
+--------------------------------------------------------------*/
+.tm-header .uk-navbar-nav > li > a {
+  color: #444;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+.tm-header .uk-navbar-nav > li > a:hover {
+  color: purple;
+}
+.tm-header.uk-active .uk-navbar-nav > li > a {
+  color: #444;
+}
+.tm-header.uk-active .uk-navbar-nav > li > a:hover {
+  color: purple;
+}
+.tm-header .sub-menu > li > a {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+}
+.tm-primary-menu .uk-dropdown {
+  top: 32px !important;
+}
+/*-----------------------------------------------------------
+	Mobile nav off canvas
+/*------------------------------------------------------------*/
+/* ========================================================================
+   Component: Overlay
+ ========================================================================== */
+/*
+ * 1. Container width fits its content
+ * 2. Create position context
+ * 3. Set max-width for responsive images to prevent `inline-block` consequences
+ * 4. Remove the gap between the container and its child element
+ * 5. Needed for transitions and to fixed wrong scaling calculation for images in Chrome
+ * 6. Fixed `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
+ * 7. Reset margin
+ */
+.uk-overlay {
+  /* 1 */
+  display: inline-block;
+  /* 2 */
+  position: relative;
+  /* 3 */
+  max-width: 100%;
+  /* 4 */
+  vertical-align: middle;
+  /* 5 */
+  overflow: hidden;
+  /* 6 */
+  -webkit-transform: translateZ(0);
+  /* 7 */
+  margin: 0;
+}
+/* 6 for Safari */
+.uk-overlay.uk-border-circle {
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+/*
+ * Remove margin from content
+ */
+.uk-overlay > :first-child {
+  margin-bottom: 0;
+}
+/* Sub-object `uk-overlay-panel`
+ ========================================================================== */
+/*
+ * 1. Position cover
+ * 2. Style
+ */
+.uk-overlay-panel {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* 2 */
+  padding: 10px;
+  color: #fff;
+}
+/*
+ * Remove margin from the last-child
+ */
+.uk-overlay-panel > :last-child,
+.uk-overlay-panel.uk-flex > * > :last-child {
+  margin-bottom: 0;
+}
+/*
+ * Keep color for headings if the default heading color is changed
+ */
+.uk-overlay-panel h1,
+.uk-overlay-panel h2,
+.uk-overlay-panel h3,
+.uk-overlay-panel h4,
+.uk-overlay-panel h5,
+.uk-overlay-panel h6 {
+  color: inherit;
+}
+.uk-overlay-panel a:not([class]) {
+  color: inherit;
+  text-decoration: none;
+}
+.uk-overlay-panel a[class*='uk-icon-']:not(.uk-icon-button) {
+  color: inherit;
+}
+/* Sub-object `uk-overlay-hover` and `uk-overlay-active`
+ ========================================================================== */
+.uk-overlay-hover:not(:hover):not(.uk-hover) .uk-overlay-panel:not(.uk-ignore) {
+  opacity: 0;
+}
+.uk-overlay-active :not(.uk-active) > .uk-overlay-panel:not(.uk-ignore) {
+  opacity: 0;
+}
+/* Modifier `uk-overlay-background`
+ ========================================================================== */
+.uk-overlay-background {
+  background: rgba(0, 0, 0, 0.5);
+}
+/* Modifier `uk-overlay-image`
+ ========================================================================== */
+/*
+ * Reset panel
+ */
+.uk-overlay-image {
+  padding: 0;
+}
+/* Position modifiers
+ ========================================================================== */
+.uk-overlay-top {
+  bottom: auto;
+}
+.uk-overlay-bottom {
+  top: auto;
+}
+.uk-overlay-left {
+  right: auto;
+}
+.uk-overlay-right {
+  left: auto;
+}
+/* Sub-object `uk-overlay-icon`
+ ========================================================================== */
+.uk-overlay-icon:before {
+  content: "\f002";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  font-size: 50px;
+  line-height: 1;
+  font-family: FontAwesome;
+  text-align: center;
+  color: #fff;
+}
+/* Transitions
+ ========================================================================== */
+.uk-overlay-fade,
+.uk-overlay-scale,
+.uk-overlay-spin,
+.uk-overlay-grayscale,
+.uk-overlay-blur,
+[class*='uk-overlay-slide'] {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-property: opacity, transform, filter;
+}
+.uk-overlay-active .uk-overlay-fade,
+.uk-overlay-active .uk-overlay-scale,
+.uk-overlay-active .uk-overlay-spin,
+.uk-overlay-active [class*='uk-overlay-slide'] {
+  transition-duration: 0.8s;
+}
+/*
+ * Fade
+ */
+.uk-overlay-fade {
+  opacity: 0.7;
+}
+.uk-overlay-hover:hover .uk-overlay-fade,
+.uk-overlay-hover.uk-hover .uk-overlay-fade,
+.uk-overlay-active .uk-active > .uk-overlay-fade {
+  opacity: 1;
+}
+/*
+ * Scale
+ */
+.uk-overlay-scale {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.uk-overlay-hover:hover .uk-overlay-scale,
+.uk-overlay-hover.uk-hover .uk-overlay-scale,
+.uk-overlay-active .uk-active > .uk-overlay-scale {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*
+ * Spin
+ */
+.uk-overlay-spin {
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+}
+.uk-overlay-hover:hover .uk-overlay-spin,
+.uk-overlay-hover.uk-hover .uk-overlay-spin,
+.uk-overlay-active .uk-active > .uk-overlay-spin {
+  -webkit-transform: scale(1.1) rotate(3deg);
+  transform: scale(1.1) rotate(3deg);
+}
+/*
+ * Grayscale
+ */
+.uk-overlay-grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.uk-overlay-hover:hover .uk-overlay-grayscale,
+.uk-overlay-hover.uk-hover .uk-overlay-grayscale,
+.uk-overlay-active .uk-active > .uk-overlay-grayscale {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+/*
+ * Slide
+ */
+[class*='uk-overlay-slide'] {
+  opacity: 0;
+}
+/* Top */
+.uk-overlay-slide-top {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+/* Bottom */
+.uk-overlay-slide-bottom {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+/* Left */
+.uk-overlay-slide-left {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+/* Right */
+.uk-overlay-slide-right {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+/* Hover */
+.uk-overlay-hover:hover [class*='uk-overlay-slide'],
+.uk-overlay-hover.uk-hover [class*='uk-overlay-slide'],
+.uk-overlay-active .uk-active > [class*='uk-overlay-slide'] {
+  opacity: 1;
+  -webkit-transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
+}
+/* DEPRECATED
+ * Sub-object `uk-overlay-area`
+ ========================================================================== */
+/*
+ * 1. Set position
+ * 2. Set style
+ * 3. Fade-in transition
+ */
+.uk-overlay-area {
+  /* 1 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* 2 */
+  background: rgba(0, 0, 0, 0.3);
+  /* 3 */
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+/*
+ * Hover
+ * 1. `uk-hover` to support touch devices
+ * 2. Use optional `uk-overlay-toggle` to trigger the overlay earlier
+ */
+.uk-overlay:hover .uk-overlay-area,
+.uk-overlay.uk-hover .uk-overlay-area,
+.uk-overlay-toggle:hover .uk-overlay-area,
+.uk-overlay-toggle.uk-hover .uk-overlay-area {
+  opacity: 1;
+}
+/*
+ * Icon
+ */
+.uk-overlay-area:empty:before {
+  content: "\f002";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  font-size: 50px;
+  line-height: 1;
+  font-family: FontAwesome;
+  text-align: center;
+  color: #fff;
+}
+/* DEPRECATED
+ * Sub-object `uk-overlay-area-content`
+ ========================================================================== */
+/*
+ * Remove whitespace between child elements when using `inline-block`
+ * Needed for Firefox
+ */
+.uk-overlay-area:not(:empty) {
+  font-size: 0.001px;
+}
+/*
+ * 1. Needed for vertical alignment
+ */
+.uk-overlay-area:not(:empty):before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+/*
+ * 1. Set vertical alignment
+ * 2. Reset whitespace hack
+ * 3. Set horizontal alignment
+ * 4. Set style
+ */
+.uk-overlay-area-content {
+  /* 1 */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  vertical-align: middle;
+  /* 2 */
+  font-size: 1rem;
+  /* 3 */
+  text-align: center;
+  /* 4 */
+  padding: 0 15px;
+  color: #fff;
+}
+/*
+ * Remove margin from the last-child
+ */
+.uk-overlay-area-content > :last-child {
+  margin-bottom: 0;
+}
+/*
+ * Links in overlay area
+ */
+.uk-overlay-area-content a:not([class]),
+.uk-overlay-area-content a:not([class]):hover {
+  color: inherit;
+}
+/* DEPRECATED
+ * Sub-object `uk-overlay-caption`
+ ========================================================================== */
+/*
+ * 1. Set position
+ * 2. Set style
+ * 3. Fade-in transition
+ */
+.uk-overlay-caption {
+  /* 1 */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* 2 */
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  /* 3 */
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+/*
+ * Hover
+ * 1. `uk-hover` to support touch devices
+ * 2. Use optional `uk-overlay-toggle` to trigger the overlay earlier
+ */
+.uk-overlay:hover .uk-overlay-caption,
+.uk-overlay.uk-hover .uk-overlay-caption,
+.uk-overlay-toggle:hover .uk-overlay-caption,
+.uk-overlay-toggle.uk-hover .uk-overlay-caption {
+  opacity: 1;
+}
 .tm-overlay-layla .uk-overlay > .uk-overlay-panel {
   padding: 25px;
 }
@@ -9000,11 +9358,6 @@ a.uk-thumbnail:focus {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
-:not(pre) > code,
-:not(pre) > kbd,
-:not(pre) > samp {
-  white-space: normal;
-}
 input[type="button"] {
   /* 1 */
   -webkit-appearance: none;
@@ -9021,7 +9374,7 @@ input[type="button"] {
   display: inline-block;
   box-sizing: border-box;
   padding: 0 20px;
-  background: aqua;
+  background: purple;
   vertical-align: middle;
   /* 8 */
   line-height: 40px;
@@ -9032,10 +9385,10 @@ input[type="button"] {
   /* 11 */
   text-decoration: none;
   text-align: center;
-  border: 2px solid aqua;
+  border: 2px solid purple;
   border-radius: 2px;
   background-color: transparent;
-  color: aqua;
+  color: purple;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -9044,16 +9397,16 @@ input[type="button"] {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
-  background-color: aqua;
+  background-color: purple;
   color: #fff;
   border: none;
-  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif !important;
   color: #fff !important;
   font-weight: 300 !important;
   cursor: pointer;
 }
 input[type="button"]:hover {
-  background: #33ffff;
+  background: #b300b3;
   -webkit-box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
@@ -9186,26 +9539,6 @@ input[type="button"]:hover {
  */
 .uk-dotnav-vertical > * {
   float: none;
-}
-.uk-nav-dropdown > li > a {
-  color: #777777;
-  padding: 10px;
-  border-bottom: 1px solid #ededed;
-}
-.uk-nav-dropdown > li > a:hover {
-  background-color: aqua;
-}
-.uk-nav-dropdown > li:last-of-type > a {
-  border-bottom: none;
-}
-.uk-dropdown .uk-nav {
-  margin: -15px -15px;
-}
-.uk-nav-dropdown ul a {
-  color: #777777;
-}
-.uk-nav-dropdown ul a:hover {
-  color: aqua;
 }
 /* ========================================================================
 Component: Slidenav
@@ -9585,7 +9918,7 @@ input {
   /* 5 */
   font-size: 18px;
   line-height: 30px;
-  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif !important;
   font-size: 16px;
 }
 /*
@@ -9953,7 +10286,7 @@ input {
 .uk-badge {
   display: inline-block;
   padding: 0 5px;
-  background: aqua;
+  background: purple;
   font-size: 10px;
   font-weight: bold;
   line-height: 14px;
@@ -10029,7 +10362,7 @@ a.uk-badge:hover {
  * Item subtitle
  */
 .uk-nav li > a > div {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
 }
 /* Sub-object: `uk-nav-header`
@@ -10038,7 +10371,7 @@ a.uk-badge:hover {
   padding: 5px 15px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }
 .uk-nav-header:not(:first-child) {
   margin-top: 15px;
@@ -10091,7 +10424,7 @@ ul.uk-nav-sub {
 }
 /* Active */
 .uk-nav-side > li.uk-active > a {
-  background: aqua;
+  background: purple;
   color: #fff;
 }
 /*
@@ -10104,13 +10437,13 @@ ul.uk-nav-sub {
  * Sub-object: `uk-nav-divider`
  */
 .uk-nav-side .uk-nav-divider {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ededed;
 }
 /*
  * Nested items
  */
 .uk-nav-side ul a {
-  color: aqua;
+  color: purple;
 }
 .uk-nav-side ul a:hover {
   color: #2D3047;
@@ -10130,7 +10463,7 @@ ul.uk-nav-sub {
  */
 .uk-nav-dropdown > li > a:hover,
 .uk-nav-dropdown > li > a:focus {
-  background: aqua;
+  background: purple;
   color: #fff;
   /* 2 */
   outline: none;
@@ -10145,13 +10478,13 @@ ul.uk-nav-sub {
  * Sub-object: `uk-nav-divider`
  */
 .uk-nav-dropdown .uk-nav-divider {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ededed;
 }
 /*
  * Nested items
  */
 .uk-nav-dropdown ul a {
-  color: aqua;
+  color: purple;
 }
 .uk-nav-dropdown ul a:hover {
   color: #2D3047;
@@ -10171,7 +10504,7 @@ ul.uk-nav-sub {
  */
 .uk-nav-navbar > li > a:hover,
 .uk-nav-navbar > li > a:focus {
-  background: aqua;
+  background: purple;
   color: #fff;
   /* 2 */
   outline: none;
@@ -10186,13 +10519,13 @@ ul.uk-nav-sub {
  * Sub-object: `uk-nav-divider`
  */
 .uk-nav-navbar .uk-nav-divider {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ededed;
 }
 /*
  * Nested items
  */
 .uk-nav-navbar ul a {
-  color: aqua;
+  color: purple;
 }
 .uk-nav-navbar ul a:hover {
   color: #2D3047;
@@ -10215,7 +10548,7 @@ ul.uk-nav-sub {
 .uk-nav-offcanvas > .uk-open > a,
 html:not(.uk-touch) .uk-nav-offcanvas > li > a:hover,
 html:not(.uk-touch) .uk-nav-offcanvas > li > a:focus {
-  background: aqua;
+  background: purple;
   color: #fff;
   /* 2 */
   outline: none;
@@ -10225,7 +10558,7 @@ html:not(.uk-touch) .uk-nav-offcanvas > li > a:focus {
  * `html .uk-nav` needed for higher specificity to override hover
  */
 html .uk-nav.uk-nav-offcanvas > li.uk-active > a {
-  background: aqua;
+  background: purple;
   color: #fff;
 }
 /*
@@ -10238,14 +10571,14 @@ html .uk-nav.uk-nav-offcanvas > li.uk-active > a {
  * Sub-object: `uk-nav-divider`
  */
 .uk-nav-offcanvas .uk-nav-divider {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ededed;
 }
 /*
  * Nested items
  * No hover on touch devices because it behaves buggy in fixed offcanvas
  */
 .uk-nav-offcanvas ul a {
-  color: #ccc;
+  color: #ededed;
 }
 html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   color: #fff;
@@ -10275,7 +10608,7 @@ footer
   border-top: none;
 }
 .tm-footer .uk-icon-button {
-  background: aqua;
+  background: purple;
   color: #fff;
   margin-right: 10px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -10292,19 +10625,19 @@ footer
   -o-transform: rotateZ(360deg);
 }
 .tm-footer .uk-icon-heart {
-  color: aqua;
+  color: purple;
   margin-left: 3px;
 }
-.tm-fat-footer {
+.tm-footer-widgets {
   background: #2D3047;
 }
-.tm-fat-footer .tm-widget {
+.tm-footer-widgets .tm-widget {
   background: #2D3047;
   color: #ededed;
 }
-.tm-fat-footer .tm-widget .uk-panel-title {
+.tm-footer-widgets .tm-widget .uk-panel-title {
   text-transform: uppercase;
-  color: aqua;
+  color: purple;
 }
 /*--------------------------------------------------------------
 Header
@@ -10330,8 +10663,8 @@ Header
   font-weight: 400;
   color: #444;
   text-transform: uppercase;
-  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border-bottom: 1px solid aqua;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid purple;
   font-size: 20px;
   letter-spacing: 2px;
 }
@@ -10376,7 +10709,8 @@ Header
 .top-bar {
   display: none;
   background: #2D3047;
-  padding: 5px;
+  text-align: right;
+  padding: 20px 35px;
 }
 @media (min-width: 768px) {
   .top-bar {
@@ -10385,7 +10719,7 @@ Header
 }
 .top-bar .tm-widget {
   color: #fff;
-  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 .top-bar .tm-widget p {
@@ -10399,7 +10733,7 @@ Header
   height: 24px;
   font-size: 14px;
   line-height: 24px;
-  background: aqua;
+  background: purple;
   color: #fff;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -10418,7 +10752,7 @@ Header
   color: #fff;
 }
 .top-bar a:hover {
-  color: aqua;
+  color: purple;
 }
 .top-bar .uk-icon-phone {
   margin-right: 8px;
@@ -10427,41 +10761,13 @@ Header
   top: 1px;
 }
 /*--------------------------------------------------------------
-Header nav
---------------------------------------------------------------*/
-.tm-header .uk-navbar-nav > li > a {
-  color: #444;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.tm-header .uk-navbar-nav > li > a:hover {
-  color: aqua;
-}
-.tm-header.uk-active .uk-navbar-nav > li > a {
-  color: #444;
-}
-.tm-header.uk-active .uk-navbar-nav > li > a:hover {
-  color: aqua;
-}
-.tm-header .sub-menu > li > a {
-  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
-}
-.tm-primary-menu .uk-dropdown {
-  top: 32px !important;
-}
-/*-----------------------------------------------------------
-	Mobile nav off canvas
-/*------------------------------------------------------------*/
-/*--------------------------------------------------------------
 sidebar
 --------------------------------------------------------------*/
 .tm-secondary {
   margin-bottom: 100px;
 }
 .tm-secondary .tm-widget .uk-panel-title {
-  background: aqua;
+  background: purple;
   color: #fff;
   margin-top: -20px;
   margin-left: -20px;
@@ -10490,7 +10796,7 @@ sidebar
   line-height: 1;
 }
 .tm-secondary .tm-widget .uk-list li a:hover {
-  color: aqua;
+  color: purple;
 }
 /*--------------------------------------------------------------
 content

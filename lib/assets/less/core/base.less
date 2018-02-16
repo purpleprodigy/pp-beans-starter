@@ -2,7 +2,7 @@
 // ========================================================================
 @base-body-background:                           @global-background;
 
-@base-body-font-family: 						'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+@base-body-font-family: 						'Open Sans', Helvetica, Arial, sans-serif;
 @base-body-font-weight:                         400;
 @base-body-font-size:                           @global-font-size;
 @base-body-line-height:                         @global-line-height;
@@ -18,8 +18,8 @@
 
 @base-margin-vertical:                          @global-margin;
 
-@base-heading-font-family:                      "Oswald",  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@base-heading-font-weight:                      300;
+@base-heading-font-family:                      'Raleway', Helvetica, Arial, sans-serif;
+@base-heading-font-weight:                      600;
 @base-heading-color:                            @global-color;
 @base-heading-margin-top:                       @global-margin-large;
 @base-h1-font-size:                             round((@global-font-size * 2.6)); // 36px / 42px
@@ -43,8 +43,6 @@
 
 @base-list-padding-left:                        30px;
 
-
-
 @base-blockquote-padding-left:                  15px;
 @base-blockquote-border:                        @light-grey;
 @base-blockquote-border-width:                  5px;
@@ -53,7 +51,7 @@
 @base-blockquote-font-style:                    italic;
 
 @base-selection-background:                     @primary-color;
-@base-selection-color:                          #fff;
+@base-selection-color:                          @white;
 
 
 // Body
@@ -80,8 +78,8 @@
 // ========================================================================
 
 .hook-base-h() {
-  color: @primary-color;
-  margin-bottom: 15px;
+    color: @primary-color;
+    margin-bottom: 15px;
 }
 
 .hook-base-h1() {}
@@ -124,6 +122,6 @@
 :not(pre) > kbd,
 :not(pre) > samp {
 
-  white-space: normal;
+    white-space: normal;
 
 }

@@ -5,3 +5,7 @@ include_once( 'lib/init.php' );
 require_once( get_template_directory() . '/lib/init.php' );
 
 include_once( 'lib/functions/autoload.php' );
+
+beans_remove_action( 'beans_post_meta' );
+
+//beans_remove_action( 'beans_post_meta_categories' );

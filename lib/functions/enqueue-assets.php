@@ -20,7 +20,7 @@ if ( $css_dev_mode_enabled ) {
 function pp_enqueue_dev_styles() {
 	//Development CSS mode: available to css injection and source maps through Codekit, gulp or grunt.
 
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/lib/assets/less/css/style.css' );
+	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/lib/assets/less/style.css' );
 }
 
 /**
@@ -39,7 +39,10 @@ function pp_enqueue_styles() {
 
 // Enqueue LESS files to the UIkit compiler
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_URL . '/lib/assets/less/partials/fonts.less',
+		CHILD_URL . '/lib/assets/less/core/base.less',
+		CHILD_URL . '/lib/assets/less/core/nav.less',
+		CHILD_URL . '/lib/assets/less/core/variables.less',
+		CHILD_URL . '/lib/assets/less/core/overlay.less',
 		CHILD_URL . '/lib/assets/less/partials/default.less',
 		CHILD_URL . '/lib/assets/less/layout/header.less',
 		CHILD_URL . '/lib/assets/less/layout/footer.less',
@@ -49,9 +52,6 @@ function pp_enqueue_styles() {
 		CHILD_URL . '/lib/assets/less/partials/content.less',
 		CHILD_URL . '/lib/assets/less/layout/pages.less',
 		CHILD_URL . '/lib/assets/less/utilities/mixins.less',
-		CHILD_URL . '/lib/assets/less/components/slideshow.less',
-		CHILD_URL . '/lib/assets/less/core/nav.less',
-		CHILD_URL . '/lib/assets/less/core/variables.less',
 
 	), 'less' );
 }
@@ -106,5 +106,5 @@ add_action( 'wp_enqueue_scripts', 'pp_add_google_fonts' );
  * @return void
  */
 function pp_add_google_fonts() {
-	wp_enqueue_style( 'pp-google-fonts', 'https://fonts.googleapis.com/css?family=Lato|Oswald:300,400,500|Raleway:300,300i,400,400i,600', false );
+	wp_enqueue_style( 'pp-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Raleway:300,400,600', false );
 }

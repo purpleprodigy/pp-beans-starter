@@ -9,15 +9,8 @@ add_action( 'wp', 'pp_set_up_header_structure' );
  */
 function pp_set_up_header_structure() {
 
-    //Remove title tagline
-	beans_remove_action( 'beans_site_title_tag' );
-
 	//sticky header
 	beans_add_attribute( 'beans_header', 'data-uk-sticky', "{top:-300, animation:'uk-animation-slide-top'}" );
-
-    //Hero area
-	add_action( 'beans_header_after_markup', 'pp_display_hero_area' );
-
 
 	// Breadcrumb
 	beans_remove_action( 'beans_breadcrumb' );
@@ -49,20 +42,3 @@ function pp_display_top_bar(){
     </div>
 
 <?php }
-
-/**
- * Display hero area
- *
- * @since 1.0.0
- *
- * @return void
- */
-function pp_display_hero_area() {
-
-	if(is_home()||is_archive()){
-		return;
-	}
-
-	include_once CHILD_THEME_DIR .'/views/hero.php';
-
-}

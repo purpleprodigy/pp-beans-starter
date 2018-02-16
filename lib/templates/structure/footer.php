@@ -1,7 +1,7 @@
 <?php
 add_action( 'wp', 'pp_set_up_footer_structure' );
 /**
- * Set up footer structure
+ * Set up footer widgets
  *
  * @since 1.0.0
  *
@@ -10,16 +10,22 @@ add_action( 'wp', 'pp_set_up_footer_structure' );
 function pp_set_up_footer_structure() {
 	beans_wrap_markup( 'beans_footer', 'beans_footer_wrapper', 'div', array( 'class' => 'tm-footer-wrapper' ) );
 
-	//FAT FOOTER
-	beans_add_smart_action( 'beans_footer_wrapper_prepend_markup', 'pp_display_fat_footer' );
-	function pp_display_fat_footer() {
-		if(!is_active_sidebar('fat-footer')){
+	//Footer Widgets
+	beans_add_smart_action( 'beans_footer_wrapper_prepend_markup', 'pp_display_footer_widgets' );
+	function pp_display_footer_widgets() {
+		if(!is_active_sidebar('footer-widget-1')){
 		    return;
 		}?>
-		<div class="tm-fat-footer uk-block">
-			<div class="uk-container uk-container-center">
-				<?php echo beans_widget_area( 'fat-footer' ); ?>
+		<div class="tm-content uk-container uk-container-center uk-grid"">
+			<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1 uk-grid-match">
+				<?php echo beans_widget_area( 'footer-widget-1' ); ?>
 			</div>
+            <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1 uk-grid-match">
+				<?php echo beans_widget_area( 'footer-widget-2' ); ?>
+            </div>
+            <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1 uk-grid-match">
+				<?php echo beans_widget_area( 'footer-widget-3' ); ?>
+            </div>
 		</div>
 
 	<?php }
