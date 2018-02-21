@@ -9,7 +9,6 @@ add_action( 'admin_init', 'pp_beans_child_options' );
  * @return void
  */
 function pp_beans_child_options() {
-
 	$fields = array(
 		array(
 			'id'          => 'css_dev_mode',
@@ -26,7 +25,6 @@ function pp_beans_child_options() {
 			'type'        => 'checkbox',
 			'default'     => false
 		),
-
 	);
 
 	beans_register_options( $fields, 'beans_settings', 'options', array( 'title' => 'Purple Prodigy Child Theme Options' ) );

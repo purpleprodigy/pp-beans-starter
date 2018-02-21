@@ -10,7 +10,7 @@ if ( $css_dev_mode_enabled ) {
 	add_action( 'beans_uikit_enqueue_scripts', 'pp_enqueue_styles', 5 );
 }
 /**
- * Enqueue styles when in Development CSS mode.
+ * Enqueue styles when in Development CSS mode so we can view sourcemaps.
  *
  * @since 1.0.0
  *
@@ -18,13 +18,11 @@ if ( $css_dev_mode_enabled ) {
  */
 
 function pp_enqueue_dev_styles() {
-	//Development CSS mode: available to css injection and source maps through Codekit, gulp or grunt.
-
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/lib/assets/less/style.css' );
 }
 
 /**
- * Enqueue styles in production.
+ * Enqueue styles in production using Beans Compiler API.
  *
  * @since 1.0.0
  *
@@ -32,44 +30,38 @@ function pp_enqueue_dev_styles() {
  */
 
 function pp_enqueue_styles() {
-//Production css mode: autocompile.
-
 //	Enqueue custom UIkit styles and overwrite with the theme folder.
-	beans_uikit_enqueue_theme( 'beans_child', CHILD_URL . '/lib/assets/less/theme' );
+	beans_uikit_enqueue_theme( 'beans_child', CHILD_LIB . '/assets/less/theme' );
 
-// Enqueue LESS files to the UIkit compiler
+// Enqueue LESS files to the UIkit compiler.
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_URL . '/lib/assets/less/core/base.less',
-		CHILD_URL . '/lib/assets/less/core/variables.less',
-		CHILD_URL . '/lib/assets/less/core/overlay.less',
-		CHILD_URL . '/lib/assets/less/partials/default.less',
-		CHILD_URL . '/lib/assets/less/layout/header.less',
-		CHILD_URL . '/lib/assets/less/layout/footer.less',
-		CHILD_URL . '/lib/assets/less/core/nav.less',
-		CHILD_URL . '/lib/assets/less/layout/sidebar.less',
-		CHILD_URL . '/lib/assets/less/layout/widgets.less',
-		CHILD_URL . '/lib/assets/less/partials/content.less',
-		CHILD_URL . '/lib/assets/less/layout/pages.less',
-		CHILD_URL . '/lib/assets/less/utilities/mixins.less',
+		CHILD_LIB . '/assets/less/core/base.less',
+		CHILD_LIB . '/assets/less/core/overlay.less',
+		CHILD_LIB . '/assets/less/core/variables.less',
+		CHILD_LIB . '/assets/less/layout/default.less',
+		CHILD_LIB . '/assets/less/layout/content.less',
+		CHILD_LIB . '/assets/less/layout/header.less',
+		CHILD_LIB . '/assets/less/layout/footer.less',
+		CHILD_LIB . '/assets/less/layout/pages.less',
+		CHILD_LIB . '/assets/less/layout/widgets.less',
+		CHILD_LIB . '/assets/less/utilities/mixins.less',
 
 	), 'less' );
 }
 
 beans_add_smart_action( 'beans_uikit_enqueue_scripts', 'pp_enqueue_uikit_assets', 5 );
 /**
- * Enqueue UIkit assets
+ * Enqueue UIkit assets using Beans Compiler API.
  *
  * @since 1.0.0
  *
  * @return void
  */
 function pp_enqueue_uikit_assets() {
-
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_LIB . '/lib/assets/js/animatedtext.js',
-		CHILD_LIB . '/lib/assets/js/theme.js'
+		CHILD_LIB . '/assets/js/animatedtext.js',
+		CHILD_LIB . '/assets/js/theme.js'
 	), 'js' );
-
 
 	beans_uikit_enqueue_components( array(
 		'contrast',

@@ -1,4 +1,5 @@
 <?php
+
 include_once 'lib/init.php';
 
 // Include Beans. Do not remove the line below.

@@ -10367,47 +10367,6 @@ a {
   }
 }
 /*--------------------------------------------------------------
-footer
---------------------------------------------------------------*/
-.tm-footer {
-  background: #232537;
-  color: #fff;
-  padding: 25px;
-  border-top: none;
-}
-.tm-footer .uk-icon-button {
-  background: purple;
-  color: #fff;
-  margin-right: 10px;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.tm-footer .uk-icon-button:hover {
-  background: #4b5076;
-  -webkit-transform: rotateZ(360deg);
-  -moz-transform: rotateZ(360deg);
-  -ms-transform: rotateZ(360deg);
-  -o-transform: rotateZ(360deg);
-}
-.tm-footer .uk-icon-heart {
-  color: purple;
-  margin-left: 3px;
-}
-.tm-footer-widgets {
-  background: #2D3047;
-}
-.tm-footer-widgets .tm-widget {
-  background: #2D3047;
-  color: #ededed;
-}
-.tm-footer-widgets .tm-widget .uk-panel-title {
-  text-transform: uppercase;
-  color: purple;
-}
-/*--------------------------------------------------------------
 Header
 --------------------------------------------------------------*/
 .tm-header {
@@ -10435,41 +10394,6 @@ Header
   border-bottom: 1px solid purple;
   font-size: 20px;
   letter-spacing: 2px;
-}
-/*-----------------------------------------------------------
-	hero area
-/*------------------------------------------------------------*/
-.tm-hero-area {
-  height: 400px;
-}
-.tm-hero-area .uk-article-title {
-  color: #fff;
-}
-.tm-hero-area .uk-article-title {
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px #000;
-}
-/*-----------------------------------------------------------
-	Transparent header
-/*------------------------------------------------------------*/
-.has-featured-image .tm-header:not(.uk-active),
-.page-template-builder-page .tm-header:not(.uk-active) {
-  position: absolute;
-  width: 100%;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-bottom: 0;
-}
-.has-featured-image .tm-header:not(.uk-active) a,
-.page-template-builder-page .tm-header:not(.uk-active) a,
-.has-featured-image .tm-header:not(.uk-active) .tm-primary-menu li a,
-.page-template-builder-page .tm-header:not(.uk-active) .tm-primary-menu li a {
-  color: #fff;
-}
-.has-featured-image .tm-header:not(.uk-active) .tm-primary-menu .uk-dropdown,
-.page-template-builder-page .tm-header:not(.uk-active) .tm-primary-menu .uk-dropdown {
-  background-color: rgba(0, 0, 0, 0.3);
 }
 /*-----------------------------------------------------------
 	Above Header Widget
@@ -10522,14 +10446,14 @@ Header
 .above-header-widget a:hover {
   color: purple;
 }
-.above-header-widget .uk-icon-phone {
+.header-right-widget {
+  float: right;
+}
+.header-right-widget .uk-icon-phone {
   margin-right: 8px;
   font-size: 22px;
   position: relative;
   top: 1px;
-}
-.header-right-widget {
-  float: right;
 }
 /*--------------------------------------------------------------
 content
@@ -10584,5 +10508,46 @@ article > .tm-article-image:first-child {
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+/*--------------------------------------------------------------
+footer
+--------------------------------------------------------------*/
+.tm-footer {
+  background: #232537;
+  color: #fff;
+  padding: 25px;
+  border-top: none;
+}
+.tm-footer .uk-icon-button {
+  background: purple;
+  color: #fff;
+  margin-right: 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.tm-footer .uk-icon-button:hover {
+  background: #4b5076;
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotateZ(360deg);
+  -o-transform: rotateZ(360deg);
+}
+.tm-footer .uk-icon-heart {
+  color: purple;
+  margin-left: 3px;
+}
+.tm-footer-widgets {
+  background: #2D3047;
+}
+.tm-footer-widgets .tm-widget {
+  background: #2D3047;
+  color: #ededed;
+}
+.tm-footer-widgets .tm-widget .uk-panel-title {
+  text-transform: uppercase;
+  color: purple;
 }
 /*# sourceMappingURL=style.css.map */

@@ -32,46 +32,7 @@ Header
 
   }
 }
-/*-----------------------------------------------------------
-	hero area
-/*------------------------------------------------------------*/
 
-
-.tm-hero-area {
-  height: 400px;
-  .uk-article-title {
-    color: @white;
-  }
-  .uk-article-title{
-    text-align: center;
-    text-transform: uppercase;
-    .text-shadow(1px 1px 1px #000);
-  }
-}
-
-/*-----------------------------------------------------------
-	Transparent header
-/*------------------------------------------------------------*/
-
-
-//comment this to have the hero area below the header instead of a transparent header
-//work also on builder pages
-
-.has-featured-image, .page-template-builder-page {
-  .tm-header:not(.uk-active) {
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, .1);
-    border-bottom: 0;
-    a, .tm-primary-menu li a {
-      color: @white;
-    }
-    .tm-primary-menu .uk-dropdown {
-      background-color: rgba(0, 0, 0, .3);
-    }
-  }
-}
 /*-----------------------------------------------------------
 	Above Header Widget
 /*------------------------------------------------------------*/
@@ -109,7 +70,6 @@ Header
         background: lighten(@secondary-color, 15%);
         .transform(rotateZ(360deg));
       }
-
     }
   }
   a {
@@ -118,14 +78,14 @@ Header
       color: @primary-color;
     }
   }
+}
+
+.header-right-widget {
+  float: right;
   .uk-icon-phone{
     margin-right: 8px;
     font-size: 22px;
     position: relative;
     top:1px;
   }
-}
-
-.header-right-widget {
-  float: right;
 }

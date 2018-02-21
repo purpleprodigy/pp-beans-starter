@@ -1,4 +1,5 @@
 <?php
+
 add_action( 'widgets_init', 'pp_register_widget_areas' );
 /**
  * Register the widget areas.
