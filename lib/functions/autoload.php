@@ -13,6 +13,7 @@ function pp_load_nonadmin_files() {
 		'functions/enqueue-assets.php',
 		'functions/helper-functions.php',
 		'functions/register-widgets.php',
+		'functions/social-menu.php',
 		'templates/structure/header.php',
 		'templates/structure/post.php',
 		'templates/structure/sidebar.php',
@@ -56,4 +57,3 @@ function pp_load_specified_files( array $filenames, $folder_root = '' ) {
 
 pp_load_nonadmin_files();
 pp_load_admin_files();
-

@@ -1752,7 +1752,7 @@ iframe {
  * Item subtitle
  */
 .uk-nav li > a > div {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
 }
 /* Sub-object: `uk-nav-header`
@@ -1845,6 +1845,7 @@ ul.uk-nav-sub {
  */
 .uk-nav-dropdown > li > a {
   color: #444;
+  font-size: 13px;
 }
 /*
  * Hover
@@ -8874,34 +8875,6 @@ a.uk-thumbnail:focus {
 :not(pre) > samp {
   white-space: normal;
 }
-/*--------------------------------------------------------------
-Header nav
---------------------------------------------------------------*/
-.tm-header .uk-navbar-nav > li > a {
-  color: #444;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
-}
-.tm-header .uk-navbar-nav > li > a:hover {
-  color: purple;
-}
-.tm-header.uk-active .uk-navbar-nav > li > a {
-  color: #444;
-}
-.tm-header.uk-active .uk-navbar-nav > li > a:hover {
-  color: purple;
-}
-.tm-header .sub-menu > li > a {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
-}
-.tm-primary-menu .uk-dropdown {
-  top: 32px !important;
-}
-/*-----------------------------------------------------------
-	Mobile nav off canvas
-/*------------------------------------------------------------*/
 /* ========================================================================
    Component: Overlay
  ========================================================================== */
@@ -9558,7 +9531,7 @@ Component: Slidenav
   /* 3 */
   line-height: 30px;
   color: rgba(50, 50, 50, 0.4);
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
@@ -9601,12 +9574,12 @@ Component: Slidenav
 * Icons
 */
 .uk-slidenav-previous:before {
-  content: "\e628";
-  font-family: 'icomoon' !important;
+  content: "\f104";
+  font-family: FontAwesome;
 }
 .uk-slidenav-next:before {
-  content: "\e629";
-  font-family: 'icomoon' !important;
+  content: "\f105";
+  font-family: FontAwesome;
 }
 /* Sub-object: `uk-slidenav-position`
 ========================================================================== */
@@ -10330,258 +10303,53 @@ a.uk-badge:hover {
 .uk-badge-danger {
   background-color: #da314b;
 }
-/* ========================================================================
-   Component: Nav
- ========================================================================== */
-.uk-nav,
-.uk-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-/*
- * Items
- */
-.uk-nav li > a {
-  display: block;
-  text-decoration: none;
-}
-.uk-nav > li > a {
-  padding: 5px 15px;
-}
-/*
- * Nested items
- */
-.uk-nav ul {
-  padding-left: 15px;
-}
-.uk-nav ul a {
-  padding: 2px 0;
-}
-/*
- * Item subtitle
- */
-.uk-nav li > a > div {
+/*--------------------------------------------------------------
+Header nav
+--------------------------------------------------------------*/
+.tm-header .uk-navbar-nav > li > a,
+.pp-primary-nav .uk-navbar-nav > li > a {
+  color: #444;
   font-size: 14px;
-  line-height: 18px;
-}
-/* Sub-object: `uk-nav-header`
- ========================================================================== */
-.uk-nav-header {
-  padding: 5px 15px;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
-.uk-nav-header:not(:first-child) {
-  margin-top: 15px;
-}
-/* Sub-object: `uk-nav-divider`
- ========================================================================== */
-.uk-nav-divider {
-  margin: 9px 15px;
-}
-/* Sub-object: `uk-nav-sub`
- ========================================================================== */
-/*
- * `ul` needed for higher specificity to override padding
- */
-ul.uk-nav-sub {
-  padding: 5px 0 5px 15px;
-}
-/* Modifier: `uk-nav-parent-icon`
- ========================================================================== */
-.uk-nav-parent-icon > .uk-parent > a:after {
-  content: "\f104";
-  width: 20px;
-  margin-right: -10px;
-  float: right;
-  font-family: FontAwesome;
-  text-align: center;
-}
-.uk-nav-parent-icon > .uk-parent.uk-open > a:after {
-  content: "\f107";
-}
-/* Modifier `uk-nav-side`
- ========================================================================== */
-/*
- * Items
- */
-.uk-nav-side > li > a {
-  color: #444;
-}
-/*
- * Hover
- * 1. Apply hover style also to focus state
- * 2. Remove default focus style
- */
-.uk-nav-side > li > a:hover,
-.uk-nav-side > li > a:focus {
-  background: rgba(0, 0, 0, 0.05);
-  color: #444;
-  /* 2 */
-  outline: none;
-}
-/* Active */
-.uk-nav-side > li.uk-active > a {
-  background: purple;
-  color: #fff;
-}
-/*
- * Sub-object: `uk-nav-header`
- */
-.uk-nav-side .uk-nav-header {
-  color: #444;
-}
-/*
- * Sub-object: `uk-nav-divider`
- */
-.uk-nav-side .uk-nav-divider {
-  border-top: 1px solid #ededed;
-}
-/*
- * Nested items
- */
-.uk-nav-side ul a {
+.tm-header .uk-navbar-nav > li > a:hover,
+.pp-primary-nav .uk-navbar-nav > li > a:hover {
   color: purple;
 }
-.uk-nav-side ul a:hover {
-  color: #2D3047;
-}
-/* Modifier `uk-nav-dropdown`
- ========================================================================== */
-/*
- * Items
- */
-.uk-nav-dropdown > li > a {
+.tm-header.uk-active .uk-navbar-nav > li > a,
+.pp-primary-nav.uk-active .uk-navbar-nav > li > a {
   color: #444;
 }
-/*
- * Hover
- * 1. Apply hover style also to focus state
- * 2. Remove default focus style
- */
-.uk-nav-dropdown > li > a:hover,
-.uk-nav-dropdown > li > a:focus {
-  background: purple;
-  color: #fff;
-  /* 2 */
-  outline: none;
-}
-/*
- * Sub-object: `uk-nav-header`
- */
-.uk-nav-dropdown .uk-nav-header {
-  color: #999;
-}
-/*
- * Sub-object: `uk-nav-divider`
- */
-.uk-nav-dropdown .uk-nav-divider {
-  border-top: 1px solid #ededed;
-}
-/*
- * Nested items
- */
-.uk-nav-dropdown ul a {
+.tm-header.uk-active .uk-navbar-nav > li > a:hover,
+.pp-primary-nav.uk-active .uk-navbar-nav > li > a:hover {
   color: purple;
 }
-.uk-nav-dropdown ul a:hover {
-  color: #2D3047;
+.tm-header .sub-menu > li > a,
+.pp-primary-nav .sub-menu > li > a {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
 }
-/* Modifier `uk-nav-navbar`
- ========================================================================== */
-/*
- * Items
- */
-.uk-nav-navbar > li > a {
-  color: #444;
+.tm-primary-menu .uk-dropdown {
+  top: 32px !important;
 }
-/*
- * Hover
- * 1. Apply hover style also to focus state
- * 2. Remove default focus style
- */
-.uk-nav-navbar > li > a:hover,
-.uk-nav-navbar > li > a:focus {
-  background: purple;
-  color: #fff;
-  /* 2 */
-  outline: none;
+.pp-primary-nav {
+  background: #fff;
+  padding: 15px 0;
+  text-transform: uppercase;
 }
-/*
- * Sub-object: `uk-nav-header`
- */
-.uk-nav-navbar .uk-nav-header {
-  color: #999;
+.pp-social-menu {
+  padding: 20px 0;
+  background-color: #444;
 }
-/*
- * Sub-object: `uk-nav-divider`
- */
-.uk-nav-navbar .uk-nav-divider {
-  border-top: 1px solid #ededed;
+.pp-social-menu ul li {
+  margin-left: 20px;
 }
-/*
- * Nested items
- */
-.uk-nav-navbar ul a {
-  color: purple;
+.pp-social-menu .uk-navbar-nav > li > a {
+  display: none;
 }
-.uk-nav-navbar ul a:hover {
-  color: #2D3047;
-}
-/* Modifier `uk-nav-offcanvas`
- ========================================================================== */
-/*
- * Items
- */
-.uk-nav-offcanvas > li > a {
-  color: #fff;
-  padding: 10px 15px;
-}
-/*
- * Hover
- * No hover on touch devices because it behaves buggy in fixed offcanvas
- * 1. Apply hover style also to focus state
- * 2. Remove default focus style
- */
-.uk-nav-offcanvas > .uk-open > a,
-html:not(.uk-touch) .uk-nav-offcanvas > li > a:hover,
-html:not(.uk-touch) .uk-nav-offcanvas > li > a:focus {
-  background: purple;
-  color: #fff;
-  /* 2 */
-  outline: none;
-}
-/*
- * Active
- * `html .uk-nav` needed for higher specificity to override hover
- */
-html .uk-nav.uk-nav-offcanvas > li.uk-active > a {
-  background: purple;
-  color: #fff;
-}
-/*
- * Sub-object: `uk-nav-header`
- */
-.uk-nav-offcanvas .uk-nav-header {
-  color: #777;
-}
-/*
- * Sub-object: `uk-nav-divider`
- */
-.uk-nav-offcanvas .uk-nav-divider {
-  border-top: 1px solid #ededed;
-}
-/*
- * Nested items
- * No hover on touch devices because it behaves buggy in fixed offcanvas
- */
-.uk-nav-offcanvas ul a {
-  color: #ededed;
-}
-html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
-  color: #fff;
+.menu-social-container ul li a {
+  display: none;
 }
 /*--------------------------------------------------------------
 Site
@@ -10704,29 +10472,29 @@ Header
   background-color: rgba(0, 0, 0, 0.3);
 }
 /*-----------------------------------------------------------
-	top bar
+	Above Header Widget
 /*------------------------------------------------------------*/
-.top-bar {
+.above-header-widget {
   display: none;
   background: #2D3047;
   text-align: right;
   padding: 20px 35px;
 }
 @media (min-width: 768px) {
-  .top-bar {
+  .above-header-widget {
     display: block;
   }
 }
-.top-bar .tm-widget {
+.above-header-widget .tm-widget {
   color: #fff;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
-.top-bar .tm-widget p {
+.above-header-widget .tm-widget p {
   margin: 0;
   line-height: 1;
 }
-.top-bar .tm-widget .uk-icon-button {
+.above-header-widget .tm-widget .uk-icon-button {
   float: right;
   margin-right: 5px;
   width: 24px;
@@ -10741,62 +10509,27 @@ Header
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.top-bar .tm-widget .uk-icon-button:hover {
+.above-header-widget .tm-widget .uk-icon-button:hover {
   background: #4b5076;
   -webkit-transform: rotateZ(360deg);
   -moz-transform: rotateZ(360deg);
   -ms-transform: rotateZ(360deg);
   -o-transform: rotateZ(360deg);
 }
-.top-bar a {
+.above-header-widget a {
   color: #fff;
 }
-.top-bar a:hover {
+.above-header-widget a:hover {
   color: purple;
 }
-.top-bar .uk-icon-phone {
+.above-header-widget .uk-icon-phone {
   margin-right: 8px;
   font-size: 22px;
   position: relative;
   top: 1px;
 }
-/*--------------------------------------------------------------
-sidebar
---------------------------------------------------------------*/
-.tm-secondary {
-  margin-bottom: 100px;
-}
-.tm-secondary .tm-widget .uk-panel-title {
-  background: purple;
-  color: #fff;
-  margin-top: -20px;
-  margin-left: -20px;
-  margin-right: -20px;
-  padding: 10px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-@media (min-width: 768px) {
-  .tm-secondary .tm-widget .uk-panel-title {
-    margin-top: -40px;
-    margin-left: -30px;
-    margin-right: -30px;
-  }
-}
-.tm-secondary .tm-widget .uk-list li {
-  border-bottom: 1px dotted #ccc;
-  padding: 5px 0;
-}
-.tm-secondary .tm-widget .uk-list li:last-child {
-  border: none;
-}
-.tm-secondary .tm-widget .uk-list li a {
-  color: #444;
-  font-size: 14px;
-  line-height: 1;
-}
-.tm-secondary .tm-widget .uk-list li a:hover {
-  color: purple;
+.header-right-widget {
+  float: right;
 }
 /*--------------------------------------------------------------
 content

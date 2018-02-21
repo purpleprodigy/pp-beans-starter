@@ -9,23 +9,19 @@ add_action( 'wp', 'pp_set_up_post_structure' );
  * @return void
  */
 function pp_set_up_post_structure() {
-	//Remove featured image (it will appear in hero area)
-	beans_remove_action( 'beans_post_image' );
 
 	// Remove the post meta.
-//	beans_remove_action( 'beans_post_meta' );
+	beans_remove_action( 'beans_post_meta' );
 
-	//comments
+	// Comments styling.
 	beans_remove_attribute( 'beans_comments', 'class', 'uk-panel-box' );
 	beans_add_attribute( 'beans_comment_form_wrap', 'class', 'uk-panel-box' );
 
-	//pages
+	// Pages
 	if ( ! is_page() ) {
 		return;
 	}
-	//Remove title only on pages
-	//beans_remove_action( 'beans_post_title' );
 
-	//remove comments from pages
+	// Remove comments from pages.
 	remove_post_type_support( 'page', 'comments' );
 }

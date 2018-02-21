@@ -1,27 +1,31 @@
 <?php
 add_action( 'widgets_init', 'pp_register_widget_areas' );
 /**
- * Register your widget areas here
+ * Register the widget areas.
  *
  * @since 1.0.0
  *
  * @return void
  */
 function pp_register_widget_areas() {
-
 	$widgets_areas = array(
-
 		array(
-			'name'        => __( 'Home Slideshow', CHILD_TEXT_DOMAIN ),
-			'id'          => 'home-slideshow',
+			'name'        => __( 'Above Header', CHILD_TEXT_DOMAIN ),
+			'id'          => 'above-header-widget',
 			'beans_type'  => 'grid',
-			'description' => __( 'This is the widget area for the slideshow on the home page.', CHILD_TEXT_DOMAIN )
+			'description' => __( 'This is the widget area for above the header.', CHILD_TEXT_DOMAIN )
 		),
 		array(
-			'name'        => __( 'Top Right', CHILD_TEXT_DOMAIN ),
-			'id'          => 'top-bar',
+			'name'        => __( 'Header Right', CHILD_TEXT_DOMAIN ),
+			'id'          => 'header-right-widget',
 			'beans_type'  => 'grid',
-			'description' => __( 'This is the widget area for the top bar.', CHILD_TEXT_DOMAIN )
+			'description' => __( 'This is the widget area for the right of the header.', CHILD_TEXT_DOMAIN )
+		),
+		array(
+			'name'        => __( 'Before Footer', CHILD_TEXT_DOMAIN ),
+			'id'          => 'before-footer',
+			'beans_type'  => 'grid',
+			'description' => __( 'This is the widget area for before the footer widgets.', CHILD_TEXT_DOMAIN )
 		),
 		array(
 			'name'        => __( 'Footer Widget 1', CHILD_TEXT_DOMAIN ),
@@ -44,10 +48,6 @@ function pp_register_widget_areas() {
 	);
 
 	foreach ( $widgets_areas as $widget_area ) {
-
 		beans_register_widget_area( $widget_area );
-
-
 	}
 }
-

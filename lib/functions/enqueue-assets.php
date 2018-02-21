@@ -40,7 +40,6 @@ function pp_enqueue_styles() {
 // Enqueue LESS files to the UIkit compiler
 	beans_compiler_add_fragment( 'uikit', array(
 		CHILD_URL . '/lib/assets/less/core/base.less',
-		CHILD_URL . '/lib/assets/less/core/nav.less',
 		CHILD_URL . '/lib/assets/less/core/variables.less',
 		CHILD_URL . '/lib/assets/less/core/overlay.less',
 		CHILD_URL . '/lib/assets/less/partials/default.less',

@@ -1,11 +1,7 @@
 <?php
-include_once( 'lib/init.php' );
+include_once 'lib/init.php';
 
 // Include Beans. Do not remove the line below.
-require_once( get_template_directory() . '/lib/init.php' );
+require_once get_template_directory() . '/lib/init.php';
 
-include_once( 'lib/functions/autoload.php' );
-
-beans_remove_action( 'beans_post_meta' );
-
-//beans_remove_action( 'beans_post_meta_categories' );
+include_once 'lib/functions/autoload.php';
