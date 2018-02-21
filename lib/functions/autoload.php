@@ -19,7 +19,6 @@ function pp_load_nonadmin_files() {
 		'templates/structure/sidebar.php',
 		'templates/structure/menu.php',
 		'templates/structure/footer.php',
-		//'templates/structure/archive.php',
 	);
 	pp_load_specified_files( $filenames );
 }
