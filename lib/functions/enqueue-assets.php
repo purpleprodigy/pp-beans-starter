@@ -39,6 +39,7 @@ function pp_enqueue_styles() {
 		CHILD_LIB . '/assets/less/core/overlay.less',
 		CHILD_LIB . '/assets/less/core/variables.less',
 		CHILD_LIB . '/assets/less/layout/default.less',
+		CHILD_LIB . '/assets/less/layout/social.less',
 		CHILD_LIB . '/assets/less/layout/content.less',
 		CHILD_LIB . '/assets/less/layout/header.less',
 		CHILD_LIB . '/assets/less/layout/footer.less',

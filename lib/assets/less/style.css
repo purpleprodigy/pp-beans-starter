@@ -10448,8 +10448,11 @@ Header
 }
 .header-right-widget {
   float: right;
+  text-align: right;
+  line-height: 1.8;
 }
-.header-right-widget .uk-icon-phone {
+.header-right-widget .uk-icon-phone,
+.header-right-widget .uk-icon-map-marker {
   margin-right: 8px;
   font-size: 22px;
   position: relative;
