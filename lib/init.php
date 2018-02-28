@@ -17,8 +17,8 @@ function pp_init_constants() {
 	define( 'CHILD_THEME_DIR', get_stylesheet_directory() );
 	define( 'CHILD_LIB', CHILD_THEME_DIR . '/lib/' );
 	define( 'CHILD_URL', get_stylesheet_directory_uri() );
-	define( 'CHILD_IMG', CHILD_URL . '/assets/images/' );
-	define( 'CHILD_JS', CHILD_URL . '/assets/js/' );
+	define( 'CHILD_IMG', CHILD_LIB . 'assets/images/' );
+	define( 'CHILD_JS', CHILD_LIB . 'assets/js/' );
 }
 
 pp_init_constants();
