@@ -1,14 +1,33 @@
 <?php
 
-$css_dev_mode_enabled = (bool) get_option( 'css_dev_mode', false );
+/**
+ * Checks if the theme's developer compiled styles should be enqueued or not.
+ *
+ * @since 1.0.0
+ *
+ * @return bool
+ */
+function pp_use_dev_compiled_styles() {
 
-//Development CSS
-if ( $css_dev_mode_enabled ) {
+	if ( ! _beans_is_compiler_dev_mode() ) {
+		return false;
+	}
+
+	if ( ! (bool) get_option( 'css_dev_mode', false ) ) {
+		return false;
+	}
+
+	return file_exists( CHILD_THEME_DIR . '/assets/less/style.css' );
+}
+
+// Development CSS
+if ( pp_use_dev_compiled_styles() ) {
 	add_action( 'wp_enqueue_scripts', 'pp_enqueue_dev_styles' );
 } else {
-//Production CSS, autocompile
+// Production CSS, autocompile
 	add_action( 'beans_uikit_enqueue_scripts', 'pp_enqueue_styles', 5 );
 }
+
 /**
  * Enqueue styles when in Development CSS mode so we can view sourcemaps.
  *
