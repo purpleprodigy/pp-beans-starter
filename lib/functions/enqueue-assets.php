@@ -18,7 +18,7 @@ if ( $css_dev_mode_enabled ) {
  */
 
 function pp_enqueue_dev_styles() {
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/lib/assets/less/style.css' );
+	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/assets/less/style.css' );
 }
 
 /**
@@ -31,21 +31,21 @@ function pp_enqueue_dev_styles() {
 
 function pp_enqueue_styles() {
 //	Enqueue custom UIkit styles and overwrite with the theme folder.
-	beans_uikit_enqueue_theme( 'beans_child', CHILD_LIB . '/assets/less/theme' );
+	beans_uikit_enqueue_theme( 'beans_child', CHILD_THEME_DIR . '/assets/less/theme' );
 
 // Enqueue LESS files to the UIkit compiler.
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_LIB . '/assets/less/core/base.less',
-		CHILD_LIB . '/assets/less/core/overlay.less',
-		CHILD_LIB . '/assets/less/core/variables.less',
-		CHILD_LIB . '/assets/less/layout/default.less',
-		CHILD_LIB . '/assets/less/layout/social.less',
-		CHILD_LIB . '/assets/less/layout/content.less',
-		CHILD_LIB . '/assets/less/layout/header.less',
-		CHILD_LIB . '/assets/less/layout/footer.less',
-		CHILD_LIB . '/assets/less/layout/pages.less',
-		CHILD_LIB . '/assets/less/layout/widgets.less',
-		CHILD_LIB . '/assets/less/utilities/mixins.less',
+		CHILD_THEME_DIR . '/assets/less/core/base.less',
+		CHILD_THEME_DIR . '/assets/less/core/overlay.less',
+		CHILD_THEME_DIR . '/assets/less/core/variables.less',
+		CHILD_THEME_DIR . '/assets/less/layout/default.less',
+		CHILD_THEME_DIR . '/assets/less/layout/social.less',
+		CHILD_THEME_DIR . '/assets/less/layout/content.less',
+		CHILD_THEME_DIR . '/assets/less/layout/header.less',
+		CHILD_THEME_DIR . '/assets/less/layout/footer.less',
+		CHILD_THEME_DIR . '/assets/less/layout/pages.less',
+		CHILD_THEME_DIR . '/assets/less/layout/widgets.less',
+		CHILD_THEME_DIR . '/assets/less/utilities/mixins.less',
 
 	), 'less' );
 }
@@ -60,8 +60,8 @@ beans_add_smart_action( 'beans_uikit_enqueue_scripts', 'pp_enqueue_uikit_assets'
  */
 function pp_enqueue_uikit_assets() {
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_LIB . '/assets/js/animatedtext.js',
-		CHILD_LIB . '/assets/js/theme.js'
+		CHILD_THEME_DIR . '/assets/js/animatedtext.js',
+		CHILD_THEME_DIR . '/assets/js/theme.js'
 	), 'js' );
 
 	beans_uikit_enqueue_components( array(
