@@ -10,8 +10,8 @@
 function pp_load_nonadmin_files() {
 	$filenames = array(
 		'setup.php',
-		'functions/enqueue-assets.php',
-		'functions/helper-functions.php',
+		'assets/enqueuer.php',
+		'assets/favicon.php',
 		'functions/register-widgets.php',
 		'functions/social-menu.php',
 		'templates/structure/header.php',

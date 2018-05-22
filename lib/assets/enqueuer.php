@@ -100,3 +100,9 @@ add_action( 'wp_enqueue_scripts', 'pp_add_google_fonts' );
 function pp_add_google_fonts() {
 	wp_enqueue_style( 'pp-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Raleway:300,400,600', false );
 }
+
+// Add Google Analytics gtag script file to the <head>.
+add_action( 'wp_head', 'add_google_analytics_to_header_scripts' );
+function add_google_analytics_to_header_scripts() {
+	include_once CHILD_THEME_DIR . '/assets/js/gtag-min.js';
+}
