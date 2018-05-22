@@ -14,14 +14,14 @@ function pp_beans_child_options() {
 			'id'          => 'css_dev_mode',
 			'label'       => 'CSS dev mode',
 			'description' => __( 'Check this if you want to use your own compiler during development in
-			order to display source maps. Uncheck this in production.', CHILD_TEXT_DOMAIN ),
+			order to display source maps. Uncheck this in production.', 'pp-beans-starter' ),
 			'type'        => 'checkbox',
 			'default'     => false
 		),
 		array(
 			'id'          => 'pp_slideshow',
 			'label'       => 'Slideshow',
-			'description' => __( 'Check this if you want display a slideshow on your home page. To use the slideshow option, add required images to the featured image of individual posts using the slideshow category.', CHILD_TEXT_DOMAIN ),
+			'description' => __( 'Check this if you want display a slideshow on your home page. To use the slideshow option, add required images to the featured image of individual posts using the slideshow category.', 'pp-beans-starter' ),
 			'type'        => 'checkbox',
 			'default'     => false
 		),
