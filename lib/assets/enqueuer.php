@@ -120,8 +120,19 @@ function pp_add_google_fonts() {
 	wp_enqueue_style( 'pp-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Raleway:300,400,600', false );
 }
 
-// Add Google Analytics gtag script file to the <head>.
-add_action( 'wp_head', 'add_google_analytics_to_header_scripts' );
-function add_google_analytics_to_header_scripts() {
-	include_once CHILD_THEME_DIR . '/assets/js/gtag-min.js';
+add_action( 'wp_enqueue_scripts', 'pp_enqueue_scripts' );
+/**
+ * Enqueues theme's scripts.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function pp_enqueue_scripts() {
+	wp_enqueue_script(
+		'gtag-script',
+		get_stylesheet_directory_uri() . '/assets/js/gtag-min.js',
+		array(),
+		filemtime( CHILD_THEME_DIR . '/assets/js/gtag-min.js' )
+	);
 }
