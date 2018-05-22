@@ -17,7 +17,7 @@ function pp_use_dev_compiled_styles() {
 		return false;
 	}
 
-	return file_exists( CHILD_THEME_DIR . '/assets/less/style.css' );
+	return file_exists( _get_child_theme_directory() . '/assets/less/style.css' );
 }
 
 // Development CSS
@@ -37,7 +37,7 @@ if ( pp_use_dev_compiled_styles() ) {
  */
 
 function pp_enqueue_dev_styles() {
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/assets/less/style.css' );
+	wp_enqueue_style( 'child-style', _get_child_theme_uri() . '/assets/less/style.css' );
 }
 
 /**
@@ -49,23 +49,24 @@ function pp_enqueue_dev_styles() {
  */
 
 function pp_enqueue_styles() {
-//	Enqueue custom UIkit styles and overwrite with the theme folder.
-	beans_uikit_enqueue_theme( 'beans_child', CHILD_THEME_DIR . '/assets/less/theme' );
+	$theme_dir = _get_child_theme_directory();
 
-// Enqueue LESS files to the UIkit compiler.
+	//	Enqueue custom UIkit styles and overwrite with the theme folder.
+	beans_uikit_enqueue_theme( 'beans_child', $theme_dir . '/assets/less/theme' );
+
+	// Enqueue LESS files to the UIkit compiler.
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_THEME_DIR . '/assets/less/core/base.less',
-		CHILD_THEME_DIR . '/assets/less/core/overlay.less',
-		CHILD_THEME_DIR . '/assets/less/core/variables.less',
-		CHILD_THEME_DIR . '/assets/less/layout/default.less',
-		CHILD_THEME_DIR . '/assets/less/layout/social.less',
-		CHILD_THEME_DIR . '/assets/less/layout/content.less',
-		CHILD_THEME_DIR . '/assets/less/layout/header.less',
-		CHILD_THEME_DIR . '/assets/less/layout/footer.less',
-		CHILD_THEME_DIR . '/assets/less/layout/pages.less',
-		CHILD_THEME_DIR . '/assets/less/layout/widgets.less',
-		CHILD_THEME_DIR . '/assets/less/utilities/mixins.less',
-
+		$theme_dir . '/assets/less/core/base.less',
+		$theme_dir . '/assets/less/core/overlay.less',
+		$theme_dir . '/assets/less/core/variables.less',
+		$theme_dir . '/assets/less/layout/default.less',
+		$theme_dir . '/assets/less/layout/social.less',
+		$theme_dir . '/assets/less/layout/content.less',
+		$theme_dir . '/assets/less/layout/header.less',
+		$theme_dir . '/assets/less/layout/footer.less',
+		$theme_dir . '/assets/less/layout/pages.less',
+		$theme_dir . '/assets/less/layout/widgets.less',
+		$theme_dir . '/assets/less/utilities/mixins.less',
 	), 'less' );
 }
 
@@ -78,9 +79,11 @@ beans_add_smart_action( 'beans_uikit_enqueue_scripts', 'pp_enqueue_uikit_assets'
  * @return void
  */
 function pp_enqueue_uikit_assets() {
+	$theme_dir = _get_child_theme_directory();
+
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_THEME_DIR . '/assets/js/animatedtext.js',
-		CHILD_THEME_DIR . '/assets/js/theme.js'
+		$theme_dir . '/assets/js/animatedtext.js',
+		$theme_dir . '/assets/js/theme.js'
 	), 'js' );
 
 	beans_uikit_enqueue_components( array(
@@ -131,8 +134,8 @@ add_action( 'wp_enqueue_scripts', 'pp_enqueue_scripts' );
 function pp_enqueue_scripts() {
 	wp_enqueue_script(
 		'gtag-script',
-		get_stylesheet_directory_uri() . '/assets/js/gtag-min.js',
+		_get_child_theme_uri() . '/assets/js/gtag-min.js',
 		array(),
-		filemtime( CHILD_THEME_DIR . '/assets/js/gtag-min.js' )
+		filemtime( _get_child_theme_directory() . '/assets/js/gtag-min.js' )
 	);
 }

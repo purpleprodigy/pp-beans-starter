@@ -42,5 +42,5 @@ function pp_set_up_footer_structure() {
 beans_modify_action_callback( 'beans_footer_content', 'beans_child_footer_content' );
 
 function beans_child_footer_content() {
-	include_once CHILD_THEME_DIR . '/views/footer.php';
+	include_once _get_child_theme_directory() . '/views/footer.php';
 }

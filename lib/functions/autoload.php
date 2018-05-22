@@ -48,7 +48,7 @@ function pp_load_admin_files() {
  * @return void
  */
 function pp_load_specified_files( array $filenames, $folder_root = '' ) {
-	$folder_root = $folder_root ?: CHILD_LIB;
+	$folder_root = $folder_root ?: _get_child_theme_directory() . '/';
 	foreach ( $filenames as $filename ) {
 		include( $folder_root . $filename );
 	}
