@@ -1,19 +1,7 @@
 <?php
 
-add_action( 'wp', 'pp_set_up_menu_structure' );
-/**
- * Set up the menu structure. Removes the button class and the word 'Menu', from hamburger icon on mobile.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function pp_set_up_menu_structure() {
-	beans_remove_attribute( 'beans_primary_menu_offcanvas_button', 'class', 'uk-button' );
-	beans_remove_output( 'beans_offcanvas_menu_button' );
-	beans_remove_attribute( 'beans_widget_panel_offcanvas_menu', 'class', 'uk-panel-box' );
-}
-
+// Removes the offcanvas menu.
+remove_theme_support('offcanvas-menu' );
 
 // Relocate the primary nav to after the site's header.
 beans_replace_action_hook( 'beans_primary_menu', 'beans_header_after_markup' );
