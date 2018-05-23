@@ -26,7 +26,7 @@ function pp_social_menu() {
 		return;
 	}
 
-	echo beans_open_markup( 'pp_social_menu-container', 'div', array( 'class' => 'pp-social-menu' ) );
+	beans_open_markup_e( 'pp_social_menu-container', 'div', array( 'class' => 'pp-social-menu' ) );
 		wp_nav_menu( array(
 			'menu'            => 'Social',
 			'menu_class'      => 'uk-subnav uk-navbar-flip',
@@ -35,5 +35,5 @@ function pp_social_menu() {
 			'theme_location'  => 'social-menu',
 			'beans_type'      => 'navbar'
 		) );
-	echo beans_close_markup( 'pp_social_menu-container', 'div' );
+	beans_close_markup_e( 'pp_social_menu-container', 'div' );
 }
