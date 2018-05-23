@@ -1,6 +1,6 @@
 <?php
 
-add_action( 'admin_init', 'pp_beans_child_options' );
+add_action( 'admin_init', 'pp_register_options_with_beans' );
 /**
  * Add Options Beans Settings for Purple Prodigy Beans Child Theme.
  *
@@ -8,16 +8,8 @@ add_action( 'admin_init', 'pp_beans_child_options' );
  *
  * @return void
  */
-function pp_beans_child_options() {
+function pp_register_options_with_beans() {
 	$fields = array(
-		array(
-			'id'          => 'css_dev_mode',
-			'label'       => 'CSS dev mode',
-			'description' => __( 'Check this if you want to use your own compiler during development in
-			order to display source maps. Uncheck this in production.', 'pp-beans-starter' ),
-			'type'        => 'checkbox',
-			'default'     => false
-		),
 		array(
 			'id'          => 'pp_slideshow',
 			'label'       => 'Slideshow',

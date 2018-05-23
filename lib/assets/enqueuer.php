@@ -13,10 +13,6 @@ function pp_use_dev_compiled_styles() {
 		return false;
 	}
 
-	if ( ! (bool) get_option( 'css_dev_mode', false ) ) {
-		return false;
-	}
-
 	return file_exists( _get_child_theme_directory() . '/assets/less/style.css' );
 }
 
