@@ -10,8 +10,8 @@
 function pp_load_nonadmin_files() {
 	$filenames = array(
 		'setup.php',
-		'functions/enqueue-assets.php',
-		'functions/helper-functions.php',
+		'assets/enqueuer.php',
+		'assets/favicon.php',
 		'functions/register-widgets.php',
 		'functions/social-menu.php',
 		'templates/structure/header.php',
@@ -48,7 +48,7 @@ function pp_load_admin_files() {
  * @return void
  */
 function pp_load_specified_files( array $filenames, $folder_root = '' ) {
-	$folder_root = $folder_root ?: CHILD_LIB;
+	$folder_root = $folder_root ?: _get_child_theme_directory() . '/lib/';
 	foreach ( $filenames as $filename ) {
 		include( $folder_root . $filename );
 	}

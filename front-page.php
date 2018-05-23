@@ -19,7 +19,7 @@ if ( $pp_slideshow_enabled ) {
 			'posts_per_page' => 3
 		) );
 
-		include_once CHILD_THEME_DIR .'/views/slideshow.php';
+		include_once _get_child_theme_directory() .'/views/slideshow.php';
 	}
 }
 
@@ -35,7 +35,7 @@ beans_modify_action_callback( 'beans_loop_template', 'pp_latest_posts_in_respons
 function pp_latest_posts_in_responsive_grid_view() {
 	$posts = get_posts( array( 'posts_per_page' => 6 ) );
 
-	include_once CHILD_THEME_DIR .'/views/home-latest-posts.php';
+	include_once _get_child_theme_directory() .'/views/home-latest-posts.php';
 }
 
 beans_load_document();

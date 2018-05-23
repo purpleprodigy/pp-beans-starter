@@ -34,15 +34,13 @@ function pp_set_up_header_structure() {
  * @return void
  */
 function pp_display_above_header_widget() {
+
 	if ( ! is_active_sidebar( 'above-header-widget' ) || has_nav_menu( 'social-menu' ) ) {
 		return;
-	} ?>
-    <div class="above-header-widget">
-        <div class="uk-container uk-container-center">
-			<?php echo beans_widget_area( 'above-header-widget' ); ?>
-        </div>
-    </div>
-<?php }
+	}
+
+	include_once _get_child_theme_directory() . '/views/above-header-widget.php';
+}
 
 /**
  * Display header right widget.
@@ -52,11 +50,10 @@ function pp_display_above_header_widget() {
  * @return void
  */
 function pp_display_header_widget() {
+
 	if ( ! is_active_sidebar( 'header-right-widget' ) ) {
 		return;
-	} ?>
+	}
 
-    <div class="header-right-widget">
-		<?php echo beans_widget_area( 'header-right-widget' ); ?>
-    </div>
-<?php }
+	include_once _get_child_theme_directory() . '/views/header-widget.php';
+}
