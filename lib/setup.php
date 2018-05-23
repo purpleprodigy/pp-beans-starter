@@ -9,7 +9,29 @@ add_action( 'after_setup_theme', 'pp_set_up_child_theme' );
  * @return void
  */
 function pp_set_up_child_theme() {
-	pp_add_new_image_sizes();
+	$setup_config = require _get_child_theme_directory() . '/config/setup.php';
+
+	foreach( $setup_config as $setup_task => $config ) {
+		$func_name = "pp_{$setup_task}";
+
+		$func_name( $config );
+	}
+}
+
+/**
+ * Add theme supports.
+ *
+ * @since 1.0.0
+ *
+ * @param array $config Theme supports to add.
+ *
+ * @return void
+ */
+function pp_add_theme_support( array $config ) {
+
+	foreach ( $config as $feature => $args ) {
+		add_theme_support( $feature, $args );
+	}
 }
 
 /**
@@ -17,16 +39,11 @@ function pp_set_up_child_theme() {
  *
  * @since 1.0.0
  *
+ * @param array $config Image sizes to add.
+ *
  * @return void
  */
-function pp_add_new_image_sizes() {
-	$config = array(
-		'featured-image' => array(
-			'width'  => 720,
-			'height' => 400,
-			'crop'   => true,
-		),
-	);
+function pp_add_image_size( array $config ) {
 
 	foreach ( $config as $name => $args ) {
 		$crop = array_key_exists( 'crop', $args ) ? $args['crop'] : false;
