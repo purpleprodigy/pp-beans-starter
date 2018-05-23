@@ -34,6 +34,7 @@ function pp_set_up_header_structure() {
  * @return void
  */
 function pp_display_above_header_widget() {
+
 	if ( ! is_active_sidebar( 'above-header-widget' ) || has_nav_menu( 'social-menu' ) ) {
 		return;
 	}
@@ -49,6 +50,7 @@ function pp_display_above_header_widget() {
  * @return void
  */
 function pp_display_header_widget() {
+
 	if ( ! is_active_sidebar( 'header-right-widget' ) ) {
 		return;
 	}

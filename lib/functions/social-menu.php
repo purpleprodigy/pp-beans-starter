@@ -21,8 +21,12 @@ beans_add_smart_action( 'beans_header_before_markup', 'pp_social_menu' );
  * @return void
  */
 function pp_social_menu() {
-	if ( has_nav_menu( 'social-menu' ) ) {
-		echo beans_open_markup( 'pp_social_menu-container', 'div', array( 'class' => 'pp-social-menu' ) );
+
+	if ( ! has_nav_menu( 'social-menu' ) ) {
+		return;
+	}
+
+	echo beans_open_markup( 'pp_social_menu-container', 'div', array( 'class' => 'pp-social-menu' ) );
 		wp_nav_menu( array(
 			'menu'            => 'Social',
 			'menu_class'      => 'uk-subnav uk-navbar-flip',
@@ -31,6 +35,5 @@ function pp_social_menu() {
 			'theme_location'  => 'social-menu',
 			'beans_type'      => 'navbar'
 		) );
-		echo beans_close_markup( 'pp_social_menu-container', 'div' );
-	}
+	echo beans_close_markup( 'pp_social_menu-container', 'div' );
 }
