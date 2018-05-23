@@ -29,9 +29,14 @@ function pp_set_up_footer_structure() {
 	}
 }
 
-// Overwrite the Footer content
 beans_modify_action_callback( 'beans_footer_content', 'beans_child_footer_content' );
-
+/**
+ * Render the Footer content.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
 function beans_child_footer_content() {
 	include_once _get_child_theme_directory() . '/views/footer.php';
 }

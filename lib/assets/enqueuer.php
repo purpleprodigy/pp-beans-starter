@@ -31,7 +31,6 @@ if ( pp_use_dev_compiled_styles() ) {
  *
  * @return void
  */
-
 function pp_enqueue_dev_styles() {
 	wp_enqueue_style( 'child-style', _get_child_theme_uri() . '/assets/less/style.css' );
 }
@@ -43,7 +42,6 @@ function pp_enqueue_dev_styles() {
  *
  * @return void
  */
-
 function pp_enqueue_styles() {
 	$theme_dir = _get_child_theme_directory();
 
