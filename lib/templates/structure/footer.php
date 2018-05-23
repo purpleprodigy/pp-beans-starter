@@ -23,19 +23,10 @@ function pp_set_up_footer_structure() {
 	function pp_display_footer_widgets() {
 		if ( ! is_active_sidebar( 'footer-widget-1' ) ) {
 			return;
-		} ?>
-        <div class="tm-content uk-container uk-container-center uk-grid"">
-            <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1 uk-grid-match">
-                <?php echo beans_widget_area( 'footer-widget-1' ); ?>
-            </div>
-            <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1 uk-grid-match">
-                <?php echo beans_widget_area( 'footer-widget-2' ); ?>
-            </div>
-            <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1 uk-grid-match">
-                <?php echo beans_widget_area( 'footer-widget-3' ); ?>
-            </div>
-        </div>
-	<?php }
+		}
+
+		include_once _get_child_theme_directory() . '/views/footer-widgets.php';
+	}
 }
 
 // Overwrite the Footer content

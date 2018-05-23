@@ -26,11 +26,9 @@ add_action( 'beans_header_after_markup', 'pp_move_nav_under_header' );
  * @return void
  */
 function pp_move_nav_under_header() {
-	echo beans_open_markup( 'pp_primary_nav', 'div', array( 'class' => 'pp-primary-nav' ) );
-	?>
-    <div class="uk-container uk-container-center">
-		<?php echo beans_primary_menu(); ?>
-    </div>
-	<?php
-	echo beans_close_markup( 'pp_primary_nav', 'div' );
+	beans_open_markup_e( 'pp_primary_nav', 'div', array( 'class' => 'pp-primary-nav' ) );
+
+	    include _get_child_theme_directory() . '/views/primary-nav.php';
+
+	beans_close_markup_e( 'pp_primary_nav', 'div' );
 }
